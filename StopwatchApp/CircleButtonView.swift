@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct CircleButtonView: View {
+    
+    // MARK: Stored properties
+    let buttonColour: Color
+    let label: String
+    let labelColour: Color
+    
     var body: some View {
         
         // Create a circular button
@@ -15,8 +21,8 @@ struct CircleButtonView: View {
             
             // First layer
             Circle()
-                .foregroundColor(.gray)
-            .frame(width: 100)
+                .foregroundColor(buttonColour)
+                .frame(width: 100)
             
             // Second layer
             Circle()
@@ -25,12 +31,12 @@ struct CircleButtonView: View {
             
             // Third layer
             Circle()
-                .foregroundColor(.gray)
+                .foregroundColor(buttonColour)
                 .frame(width: 89)
             
             // Forth layer
-            Text("Reset")
-                .foregroundColor(.white)
+            Text(label)
+                .foregroundColor(labelColour)
                 .font(.title2)
             
         }
@@ -39,5 +45,9 @@ struct CircleButtonView: View {
 }
 
 #Preview {
-    CircleButtonView()
+    CircleButtonView(
+        buttonColour: .gray,
+        label: "Reset",
+        labelColour: .white
+    )
 }
