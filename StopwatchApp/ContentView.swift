@@ -27,7 +27,7 @@ struct ContentView: View {
                     
                     // Create a circular button
                     CircleButtonView(
-                        buttonColour: .gray,
+                        buttonColour: Color("Dark Grey"),
                         label: "Reset",
                         labelColour: .white
                     )
@@ -36,7 +36,7 @@ struct ContentView: View {
                     
                     // Create another circular button
                     CircleButtonView(
-                        buttonColour: .brown,
+                        buttonColour: Color("Dark Green"),
                         label: "Start",
                         labelColour: .green
                     )
