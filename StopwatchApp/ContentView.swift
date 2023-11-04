@@ -18,6 +18,8 @@ struct ContentView: View {
             // Second layer (rest of interface)
             VStack {
                 
+                Spacer()
+                
                 Text("00:09.96")
                     .font(Font.system(size: 90, weight: .thin))
                     .foregroundColor(.white)
@@ -42,6 +44,18 @@ struct ContentView: View {
                     )
                     
                 }
+                
+                // List of times
+                List {
+                    Text("1")
+                    Text("2")
+                    Text("3")
+                    Text("4")
+                    Text("5")
+                }
+                
+                // Set the amount of vertical height we want this list to take up
+                .frame(height: 300)
                 
             }
             .padding()
