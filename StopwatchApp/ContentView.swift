@@ -49,14 +49,45 @@ struct ContentView: View {
                 List {
                     
                     Group {
-                        Text("1")
-                        Text("2")
-                        Text("3")
-                        Text("4")
-                        Text("5")
+                        
+                        ListView(
+                            text: "Lap 5",
+                            colour: .white,
+                            time: "00:00.98"
+                        )
+                        
+                        ListView(
+                            text: "Lap 4",
+                            colour: .red,
+                            time: "00:04.08"
+                        )
+                        
+                        ListView(
+                            text: "Lap 3",
+                            colour: .green,
+                            time: "00:00.96"
+                        )
+                        
+                        ListView(
+                            text: "Lap 2",
+                            colour: .white,
+                            time: "00:02.76"
+                        )
+                        
+                        ListView(
+                            text: "Lap 1",
+                            colour: .white,
+                            time: "00:01 .16"
+                        )
+
                     }
                     // Remove inset from list items
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
+                    .listRowSeparator(.visible)
+                    
+                    // Add space between laps
+                    .padding(.vertical, 14)
                     
                 }
                 
