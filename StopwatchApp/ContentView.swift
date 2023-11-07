@@ -84,6 +84,9 @@ struct ContentView: View {
                     // Remove inset from list items
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     
+                    // Set row background color
+                    .listRowBackground(Color.black)
+                    
                     .listRowSeparator(.visible)
                     
                     // Add space between laps
